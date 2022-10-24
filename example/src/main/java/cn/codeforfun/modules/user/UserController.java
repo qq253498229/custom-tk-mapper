@@ -21,4 +21,14 @@ public class UserController {
         PageHelper.startPage(page.getPageNo(), page.getPageSize());
         return Page.from(userMapper.selectAll());
     }
+
+    /**
+     * h2数据库可能会报没有id的异常，需要自定义BaseMapper
+     *
+     * @see tk.mybatis.mapper.common.BaseMapper
+     */
+    @PostMapping("/insertUser")
+    public void insertUser(@RequestBody User user) {
+        userMapper.insertSelective(user);
+    }
 }
