@@ -12,6 +12,7 @@ import javax.annotation.Resource;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -27,6 +28,11 @@ class UserControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JSONUtil.createObj().toString()))
                 .andExpect(status().isOk())
+                .andExpect(jsonPath("$.totalCount").value(2))
+                .andExpect(jsonPath("$.result").isArray())
+                .andExpect(jsonPath("$.result[1].id").value(2))
+                .andExpect(jsonPath("$.result[1].name").value("李四"))
+                .andExpect(jsonPath("$.result[1].email").value("lisi@admin.com"))
                 .andDo(print())
         ;
     }
