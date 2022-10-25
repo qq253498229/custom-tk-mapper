@@ -17,7 +17,8 @@ public class InsertBatchProvider extends MapperTemplate {
     /**
      * 插入
      *
-     * @param ms
+     * @param ms MappedStatement
+     * @return 拼接之后的SQL
      */
     public String insertBatch(MappedStatement ms) {
         final Class<?> entityClass = getEntityClass(ms);

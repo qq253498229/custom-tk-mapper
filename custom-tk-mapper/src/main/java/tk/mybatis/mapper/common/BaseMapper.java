@@ -30,10 +30,8 @@ import tk.mybatis.mapper.common.base.BaseUpdateMapper;
 import tk.mybatis.mapper.custom.insert.CustomInsertSelectiveMapper;
 
 /**
- * 通用Mapper接口,其他接口继承该接口即可
- * <p/>
+ * <p>通用Mapper接口,其他接口继承该接口即可</p>
  * <p>这是一个例子，自己扩展时可以参考</p>
- * <p/>
  * <p>项目地址 : <a href="https://github.com/abel533/Mapper" target="_blank">https://github.com/abel533/Mapper</a></p>
  *
  * @param <T> 不能为空

@@ -9,10 +9,10 @@ import java.util.List;
 @RegisterMapper
 public interface CustomInsertSelectiveMapper<T> {
     /**
-     * 保存一个实体，null的属性不会保存，会使用数据库默认值
+     * 批量插入
      *
-     * @param record
-     * @return
+     * @param record 需要插入的数据List
+     * @return 成功插入条数
      */
     @InsertProvider(type = InsertBatchProvider.class, method = "dynamicSQL")
     int insertBatch(List<T> record);

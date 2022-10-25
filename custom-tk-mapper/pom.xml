@@ -5,8 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.codeforfun</groupId>
     <artifactId>custom-tk-mapper</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <description>my custom mapper</description>
+    <version>0.0.1</version>
+
+    <name>custom-tk-mapper</name>
+    <description>TK-MyBatis-Mapper自定义拓展</description>
     <url>https://github.com/qq253498229/custom-tk-mapper</url>
 
     <properties>
@@ -92,9 +94,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://gitee.com/consolelog/custom-tk-mapper.git</connection>
-        <developerConnection>scm:git:ssh://gitee.com:consolelog/custom-tk-mapper.git</developerConnection>
-        <url>https://gitee.com/consolelog/custom-tk-mapper/tree/master</url>
+        <connection>scm:git:git://github.com/qq253498229/custom-tk-mapper.git</connection>
+        <developerConnection>scm:git:ssh://github.com:qq253498229/custom-tk-mapper.git</developerConnection>
+        <url>https://github.com/qq253498229/custom-tk-mapper/tree/master</url>
     </scm>
 
     <developers>
