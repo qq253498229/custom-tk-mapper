@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @Slf4j
 @AllArgsConstructor
@@ -30,5 +32,15 @@ public class UserController {
     @PostMapping("/insertUser")
     public void insertUser(@RequestBody User user) {
         userMapper.insertSelective(user);
+    }
+
+    /**
+     * 批量插入
+     *
+     * @see tk.mybatis.mapper.custom.insert.provider.InsertBatchProvider
+     */
+    @PostMapping("/insertBatch")
+    public void insertBatch(@RequestBody List<User> userList) {
+        userMapper.insertBatch(userList);
     }
 }
