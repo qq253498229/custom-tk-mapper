@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.codeforfun</groupId>
     <artifactId>custom-tk-mapper</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>custom-tk-mapper</name>
     <description>TK-MyBatis-Mapper自定义拓展</description>
