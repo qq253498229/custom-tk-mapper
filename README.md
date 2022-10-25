@@ -1,30 +1,40 @@
 # TK-MyBatis-Mapper自定义拓展
 
-#### 介绍
+## 介绍
+
 tk-mybatis-mapper的自定义拓展
 
-#### 软件架构
-软件架构说明
+## 安装教程
 
+```xml
 
-#### 安装教程
+<dependency>
+    <groupId>cn.codeforfun</groupId>
+    <artifactId>custom-tk-mapper</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 使用说明
 
-#### 使用说明
+h2数据库动态插入
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```java
+userMapper.insertSelective(user);
+```
 
-#### 参与贡献
+批量插入
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+```java
+userMapper.insertBatch(userList);
+```
+
+## 参与贡献
+
+1. Fork 本仓库
+2. 新建 Feat_xxx 分支
+3. 提交代码
+4. 新建 Pull Request
 
 
 
