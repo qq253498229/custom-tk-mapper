@@ -40,7 +40,8 @@ public class UserController {
      * @see tk.mybatis.mapper.custom.insert.provider.InsertBatchProvider
      */
     @PostMapping("/insertBatch")
-    public void insertBatch(@RequestBody List<User> userList) {
+    public List<User> insertBatch(@RequestBody List<User> userList) {
         userMapper.insertBatch(userList);
+        return userList;
     }
 }

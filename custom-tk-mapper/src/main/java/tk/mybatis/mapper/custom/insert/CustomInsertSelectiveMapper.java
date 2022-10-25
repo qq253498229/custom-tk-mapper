@@ -1,6 +1,7 @@
 package tk.mybatis.mapper.custom.insert;
 
 import org.apache.ibatis.annotations.InsertProvider;
+import org.apache.ibatis.annotations.Options;
 import tk.mybatis.mapper.annotation.RegisterMapper;
 import tk.mybatis.mapper.custom.insert.provider.InsertBatchProvider;
 
@@ -14,6 +15,7 @@ public interface CustomInsertSelectiveMapper<T> {
      * @param record 需要插入的数据List
      * @return 成功插入条数
      */
+    @Options(useGeneratedKeys = true)
     @InsertProvider(type = InsertBatchProvider.class, method = "dynamicSQL")
     int insertBatch(List<T> record);
 

@@ -56,6 +56,9 @@ class UserControllerTest {
         param.add(JSONUtil.createObj().set("name", "赵六").set("email", "zhaoliu@admin.com"));
         mockMvc.perform(post("/insertBatch").contentType(MediaType.APPLICATION_JSON).content(param.toString()))
                 .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray())
+                .andExpect(jsonPath("$[0].id").value(3))
+                .andExpect(jsonPath("$[1].id").value(4))
                 .andDo(print())
         ;
 
